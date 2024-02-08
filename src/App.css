@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 0;
+}
+
+.header {
+  height: 6rem;
+  margin: -20px;
+  text-align: center;
+  background-color: #36033f;
+  padding: 1rem;
+}
+
+.heading{
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fdfdfe;
+  text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
+}
+
+.board{
+  display: grid;
+  grid-template-columns: repeat(3, 9rem);
+  place-items: center;
+  justify-content: center;
+}
+
+.square{
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  border: none;
+  box-shadow: 0px 0px 1rem #888888;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 4rem;
+  height: 7rem;
+  width: 7rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.square:hover {
+  box-shadow: 0px 0px 15px #414141;
+}
+
+.x{
+  color: rgb(255, 70, 37);
+}
+
+.o{
+  color: rgb(44, 135, 255);
+}
+
+.boardRow::after{
+  clear: both;
+  display: table;
+  content: '';
+}
+
+.statusBar{
+  width: 30rem;
+  font-size: 2rem;
+  background-color: white;
+  margin: 2.5rem auto;;
+  box-shadow: 0px 0px 8px #888888;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.status{
+  width: 100%;
+  text-align: center;
+  font-weight: 1.5rem;
+  padding: 1rem 0rem;
+}
+
+.x-score{
+  color: rgb(255, 70, 37);
+  border-bottom: 5px solid rgb(255, 70, 37);
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.o-score{
+  color: rgb(44, 135, 255);
+  border-bottom: 5px solid rgb(44, 135, 255);
+  border-radius: 0rem 0.5rem 0.5rem 0rem;
+}
+
+.resetButton{
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgb(0, 80, 185);
+  color: white;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  margin: 2rem auto;
+  display: block;
+}
+
+.resetButton:hover{
+  background-color: rgb(0, 119, 255);
+}
+
+
+
+@media (min-width: 590px) and (max-width: 836px) {
+  .header {
+    height: 4rem;
+    padding: 0.5rem;
+    margin: -20px;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 6rem);
+  }
+
+  .square {
+    font-size: 3em;
+    height: 5rem;
+    width: 5rem;
+    line-height: 3rem;
+  }
+
+  .statusBar {
+    width: 18rem;
+    font-size: 2rem;
+  }
+
+  .resetButton{
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 433px) and (max-width: 590px) {
+  .header {
+    height: 3.5rem;
+    padding: 0.65rem;
+    margin: -20px;
+  }
+
+  .heading {
+    font-size: 1.80rem;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 5rem);
+  }
+
+  .square {
+    font-size: 2.5em;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .statusBar {
+    width: 15rem;
+    font-size: 1.75rem;
+    margin: 3rem auto;
+  }
+  
+  .status{
+    padding: 1rem 0rem;
+  }
+
+  .resetButton{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 433px) {
+  .header {
+    height: 3rem;
+    padding: 0.7rem;
+    margin: -20px;
+  }
+
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 4rem);
+  }
+
+  .square {
+    font-size: 2em;
+    height: 3rem;
+    width: 3rem;
+    line-height: 2rem;
+  }
+
+  .statusBar {
+    width: 12rem;
+    font-size: 1rem;
+    margin: 3rem auto;
+  }
+
+  .status{
+    padding: 0.50rem 0rem;
+  }
+
+  .resetButton{
+    font-size: 1.25rem;
+  }
+}
